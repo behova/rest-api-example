@@ -1,0 +1,56 @@
+### Get All authors
+GET http://localhost:3000/authors/get
+### Get All Books 
+GET http://localhost:3000/books/get
+
+
+### Get Author by ID
+GET http://localhost:3000/authors/get/637be33ec3bb25338517b432
+### Get Book by ID
+GET http://localhost:3000/books/get/637be3aac3bb25338517b437
+
+
+### Delete Author by ID
+DELETE http://localhost:3000/authors/delete/<authorId>
+### Delete Book by ID
+DELETE http://localhost:3000/books/delete/<bookId>
+
+
+### Create Author
+POST http://localhost:3000/authors/create
+Content-Type: application/json
+
+{
+    "name":"Edgar Allen Poe"
+}
+
+### Create Book
+POST http://localhost:3000/books/create
+Content-Type: application/json
+
+{
+    "title":"Great Expectations",
+    "author": "637be33ec3bb25338517b432"
+}
+
+
+### Update Author
+PATCH http://localhost:3000/authors/<authorId>
+Content-Type: application/json
+
+{
+    "name":"<string>"
+}
+### Update Book
+PATCH http://localhost:3000/books/<bookId>
+Content-Type: application/json
+
+{
+    "title":"<string>",
+    "author": <authorId>
+}
+
+
+
+
+
